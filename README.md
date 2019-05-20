@@ -1,15 +1,21 @@
 # thread_unsafe_example
 
 Here is the callback chain for
-InterventionRequestsObservable.process_intervention_request_state()
-where self._intervention_request_data = [] is updated
+*InterventionRequestsObservable.process_intervention_request_state()*
+where *self._intervention_request_data = []* is updated
 
 --> InterventionResolver
+
 --> InterventionObserver
+
 --> DistributedDictionary
+
 --> PollingProducer
+
 --> as_ioloop_callback() (bg_utils)
+
 --> io_loop.add_callback (Tornado)
+
 
 Here is the quote from Tornado add_callback document
 https://www.tornadoweb.org/en/stable/ioloop.html
