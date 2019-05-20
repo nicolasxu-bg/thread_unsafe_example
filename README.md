@@ -24,7 +24,7 @@ https://www.tornadoweb.org/en/stable/ioloop.html
 
 https://github.com/nicolasxu-bg/thread_unsafe_example/blob/master/thread_unsafe_example.py
 
-Above example is thread unsafe, but using io_loop.add_back is thread safe. Therefore, no update lock needed for InterventionRequestsObservable.process_intervention_request_state().
+Above example is thread unsafe, but using io_loop.add_back is thread safe. Therefore, no update lock is needed for InterventionRequestsObservable.process_intervention_request_state().
 
 
 
